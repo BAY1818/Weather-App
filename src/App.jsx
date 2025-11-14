@@ -75,7 +75,7 @@ function GfGWeatherApp() {
     return (
         <div className="App">
             <h1 className="app-name">
-                GeeksforGeeks Weather App
+                Weather App
             </h1>
             <div className="search-bar">
                 <input
@@ -118,9 +118,10 @@ function GfGWeatherApp() {
                     <div className="icon-temp">
                         <img
                             className=""
-                            src={`https://openweathermap.org/img/wn/$%7Bweather.data.weather%5B0%5D.icon%7D@2x.png%60%7D
-                            alt={weather.data.weather[0].description}
+                                src={`https://openweathermap.org/img/wn/${weather.data.weather[0].icon}@2x.png`}
+                                alt={weather.data.weather[0].description}
                         />
+
                         {Math.round(weather.data.main.temp)}
                         <sup className="deg">°C</sup>
                     </div>
